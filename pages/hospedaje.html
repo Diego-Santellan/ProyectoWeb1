@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Tandil | Hospedajes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="sombra">
+            <button id="btnMenu"><img src="../image/menu.png" alt="menu"></button>
+
+            <nav id="menu" class=" ">
+                <ul>
+                    <li><a href="../index.html">inicio</a></li>
+                    <li><a href="lugares.html">lugares</a></li>
+                    <li><a href="#">hospedaje</a></li>
+                    <li><a href="actividades.html">actividades</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <h1>Tour Tandil</h1>
+            </div>
+        </div>
+    </header>
+    <main id="hospedajes">
+        <div class="content">
+            <h1>Hospedajes en Tandil</h1>
+            <p>Bienvenido a nuestra página de hospedajes en Tandil, donde la comodidad y la tranquilidad se unen para
+                ofrecerte una experiencia inolvidable en este pintoresco destino argentino. Sumérgete en la belleza
+                natural de las sierras tandilenses mientras te hospedas en nuestros acogedores alojamientos, diseñados
+                para satisfacer todas tus necesidades. Desde cálidas cabañas rústicas hasta elegantes posadas boutique,
+                contamos con una amplia variedad de opciones para que encuentres el refugio perfecto durante tu estadía.
+                Descubre la hospitalidad de Tandil y déjanos ser tu hogar lejos del hogar mientras exploras todo lo que
+                esta encantadora ciudad tiene para ofrecer</p>
+        </div>
+        <img src="../image/cabaña.jpg" alt="entrada a cabañas">
+        <div class="images">
+            <img src="../image/cabaña2.jpg" alt="entrada a cabañas">
+            <img src="../image/cabaña3.jpg" alt="entrada a cabañas">
+            <img src="../image/cabaña4.jpg" alt="entrada a cabañas">
+            <img src="../image/departamento1.jpg" alt="entrada a cabañas">
+            <img src="../image/departamento2.jpg" alt="entrada a cabañas">
+            <img src="../image/departamento3.jpg" alt="entrada a cabañas">
+        </div>
+        <div> 
+            <p>Complete el formulario y nos comunicaremos al instante, para compartirle precios y promociones.</p>
+
+            <form>
+                <caption>FORMULARIO CONTACTO</caption>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                <label for="dni">Documento:</label>
+                <input type="number" name="dni" placeholder="Ingrese su documento">
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Ingrese su email">
+                <textarea name="mensaje" placeholder="Redacta tu pregunta aquí..."></textarea>
+                <label>Completar Captcha</label>
+                <p id="captcha"></p>
+                <input type="text" id="respuesta" placeholder="Ingresa tu respuesta">
+                <input id="verificar" type="button" value="verificar">
+                <p id="devolucionCaptcha"></p>
+                <button id="btnEnviar" class="oculto">Enviar</button>
+            </form>
+        </div>
+        <section id="gestionHospedaje">
+            <form class="formCargarHospedaje">
+                <caption>Agregar Hospedaje</caption>
+                <label for="contacto">Contacto:</label>
+                <input type="tel" name="contacto" id="contacto" placeholder="Ingresar contacto recepcionista" required>
+                <label for="direccion">Direccion:</label>
+                <input type="text" name="direccion" id="direccion" placeholder="Ingresar direccion" required>
+                <label for="categoria">Categoria:</label>
+                <input type="text" name="categoria" id="categoria" placeholder="Ingresar categoria" required>
+                
+                <button type="submit" class="addSubmit">Cargar</button>
+                
+                <p id="resultadoMSJ"></p>   
+            </form>
+            <div class="search-form">
+                <input type="search" name="inputSearch" id="inputSearch" placeholder="Busque su pedido solicitado">
+                <p class="mjs" id="parrafoSearch"></p>
+            </div>
+            <div class="table">
+                <table>
+                    <caption>Referencia de hospedajes</caption>
+                    <thead>
+                        <tr>
+                            <th>Contacto</th>
+                            <th>Dirreccion</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody  id="serviceRequest">
+                    </tbody>
+                </table>
+                <div id="pagesButtons">
+                    <button id="retroceder">anterior</button>
+                    <button id="avanzar">siguiente</button>
+                </div>
+            </div>
+            <form class="formEdit oculto">
+                <caption>MODIFICAR HOSPEDAJE</caption>
+                <input type="text" id="IDHospedaje" value="Valor de solo lectura" readonly hidden required />
+                <label for="contacto">Contacto:</label>
+                <input type="tel" name="contacto" id="contactoFormEdit" placeholder="Ingresar contacto recepcionista" required>
+                <label for="direccion">Direccion:</label>
+                <input type="text" name="direccion" id="direccionFormEdit" placeholder="Ingresar direccion" required>
+                <label for="categoria">Categoria:</label>
+                <input type="text" name="categoria" id="categoriaFormEdit" placeholder="Ingresar categoria" required>
+                                
+                <button type="submit" class="updateSubmit">MODIFICAR</button>
+                <button type="submit" class="cancel">CANCELAR</button>
+                
+                <p id="resultadoEdicionMSJ"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Siguenos en nuestras redes sociales</h2>
+        <ul>
+            <li><a href="https://instagram.com"><img src="../image/instagram.png" alt="logo instagram"></a></li>
+            <li><a href="https://facebook.com"><img src="../image/facebook.png" alt="logo facebook"></a></li>
+            <li><a href="https://twitter.com"><img src="../image/twitter.png" alt="logo twitter"></a></li>
+        </ul>
+        <p>
+            Copyright &copy; <span id="copyright-year"></span>. Tour Tandil
+            <br>
+            Todos los derechos reservados
+        </p>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/captcha.js"></script>
+    <script src="../js/tablaDinamica.js"></script>
+</body>
+
+</html>
