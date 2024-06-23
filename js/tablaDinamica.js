@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const formPost = document.querySelector(".formCargarHospedaje");
     const formEdit = document.querySelector(".formEdit");
     const InputID = document.querySelector("#IDHospedaje");
-    const MODIFICAR_BTN = document.querySelector(".updateSubmit");
     const CANCELAR_BTN = document.querySelector(".cancel");
     const AVANZAR_BTN = document.querySelector("#avanzar");
     const RETROCEDER_BTN = document.querySelector("#retroceder");
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*----------------------------  escuchas  ----------------------------*/
     formPost.addEventListener('submit', sendData);
-    MODIFICAR_BTN.addEventListener('click', updateData);
+    formEdit.addEventListener('submit', updateData);
     CANCELAR_BTN.addEventListener('click', () => {
         formEdit.classList.add('oculto');
     });
@@ -137,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     }
 
-    async function updateData(event) {
-        event.preventDefault();
+    async function updateData(e) {
+        e.preventDefault();
         let id = InputID.value;
         let contacto = document.querySelector("#contactoFormEdit").value;
         let direccion = document.querySelector("#direccionFormEdit").value;
