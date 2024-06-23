@@ -6,6 +6,12 @@
 
 /* INDEX */
 /* encabezado */
+a,
+button,
+main section h2 {
+    text-transform: capitalize;
+}
+
 header {
     background-image: url(./imageCSS/header.jpeg);
     background-repeat: no-repeat;
@@ -100,12 +106,18 @@ main {
 
 main section {
     width: 100%;
+    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 200px;
+}
+
+main section p {
+    width: 80%;
+    text-align: justify;
 }
 
 /* sectiones */
@@ -206,6 +218,11 @@ main#hospedajes div {
     align-items: center;
 }
 
+main#hospedajes section#gestionHospedaje div.table {
+    display: block;
+    width: 80%;
+}
+
 main#hospedajes img {
     width: 100%;
     object-fit: contain;
@@ -218,7 +235,6 @@ main#hospedajes .images {
 form,
 .formCargarHospedaje {
     margin-top: 20px;
-    /* width: 80%; */
     font-weight: bold;
     background-color: rgba(194, 193, 193, 0.626);
     display: flex;
@@ -278,7 +294,7 @@ form textarea {
     top: 50px;
 }
 
-main#hospedajes div #pagesButtons {
+main#hospedajes #pagesButtons {
     width: 100%;
     display: flex;
     flex-direction: row;
